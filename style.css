@@ -1,0 +1,473 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Google Sans', sans-serif;
+}
+
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+
+    --fw-reg: 400;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-h0: 1.2rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #fff;
+}
+
+
+#particles-js {
+    position: absolute;
+    background: #000;
+    top: 0;
+    left: 0;
+    bottom: 5;
+    width: 100%;
+    height: 150%;
+    z-index: -1;
+}
+
+
+section {
+    padding: 5em 2em;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* .logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+} */
+
+.logo{
+    flex: 1; 
+}
+.logo a{
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo img{
+    width: 40px;
+    margin-right: 10px;
+}
+
+
+.hamburger{
+    display: none;
+}
+
+.nav-bar.active{
+    height: 450px;
+}
+
+.nav-bar ul{
+    display: flex;
+}
+
+.nav-bar ul li a{
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+
+.nav-bar ul li a:hover{
+    color: #000;
+    background: #fff;
+}
+
+.nav-bar ul li a.active{
+    color: #000; 
+    background: #fff;
+}
+
+@media only screen and (max-width:1320px){
+    header{
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width:1100px){
+    header{
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line{
+        width: 30px;
+        height: 3px;
+        background: #fff;
+        margin: 6px 0;
+
+    }
+    .nav-bar{
+        height: 0;
+        position: absolute; 
+        top: 80px; 
+        left: 0;
+        right: 0; 
+        width: 100vw;
+        background: #000;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    .nav-bar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav-bar.active ul{
+        opacity: 1;
+    }
+    .nav-bar ul li a{
+        margin-bottom: 12px;
+    }
+}
+
+
+.home-intro{
+    color: #fff;
+    align-items: center;
+    font-size: 500%;
+    text-align: center;
+}
+
+#section10 { background: url(https://www.nxworld.net/example/css-scroll-down-button/bg09.jpg) center center / cover no-repeat;}
+#section10 a {
+    padding-top: 100px;
+  }
+  #section10 a span {
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    width: 30px;
+    height: 50px;
+    margin-left: -15px;
+    border: 3px solid #fff;
+    border-radius: 5000px;
+    box-sizing: border-box;
+  }
+  #section10 a span::before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #fff;
+    border-radius: 200%;
+    -webkit-animation: sdb10 2s infinite;
+    animation: sdb10 2s infinite;
+    box-sizing: border-box;
+  }
+  #section10 a span::after {
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    content: '';
+    margin-left: -9px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+  }
+  @-webkit-keyframes sdb10 {
+    0% {
+      -webkit-transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      -webkit-transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes sdb10 {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+/*services*/
+
+/*  My services section  */
+
+.my-services {
+    background-color: #000;
+    background-image: url(../img/services-bg.jpg);
+    background-size: cover;
+    /* background-blend-mode: multiply; */
+    color: #fff;
+    text-align: center;
+    /* height: 830px; */
+    height: 100%;
+    width: 100%;
+}
+
+.section__title--services {
+    color: #9900ff;
+    position: relative;
+}
+
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: #fff;
+    opacity: 0.25;
+}
+
+.services {
+    margin-bottom: 1.5em;
+}
+
+.service {
+    max-width: 310px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+
+@media (min-width: 800px) {
+    .services {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .service + .service {
+        margin-left: 2em;
+    }
+}
+
+#section07 { background: url(https://www.nxworld.net/example/css-scroll-down-button/bg07.jpg) center center / cover no-repeat; position: relative; top: 2140;}
+#section07 a {
+    padding-top: 0px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    padding: .5em 2.5em;
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    margin-bottom: 0em;
+  }
+  #section07 a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb07 2s infinite;
+    animation: sdb07 2s infinite;
+    opacity: 0;
+    box-sizing: border-box;
+  }
+  #section07 a span:nth-of-type(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+  #section07 a span:nth-of-type(2) {
+    top: 16px;
+    -webkit-animation-delay: .15s;
+    animation-delay: .15s;
+  }
+  #section07 a span:nth-of-type(3) {
+    top: 32px;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+  }
+  @-webkit-keyframes sdb07 {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes sdb07 {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .img2 {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 2em;
+    border: 3px solid #fff;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+}
+
+.img3{
+   margin: auto;
+   display: block;
+   width: 250px;
+   height: 250px;
+   margin-bottom: 20px;
+   border-radius: 50%;
+
+}
+
+.img2:hover {
+    transform: scale(1.1);
+    margin-bottom: 2em;
+
+}
+
+.my-services .services .service .h3{
+    margin-bottom: 50px;
+}
+
+.btn {
+    display: inline-flexbox;
+    padding: .4em 3em;
+    background: #9900ff;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    border-radius: 8px;
+    padding-top: 0.06em;
+    text-align: center;
+    transition: transform 200ms ease-in-out;
+}
+
+
+/* footer */
+.footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 2.5em 0;
+    font-size: 28px;
+
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer__link {
+    font-weight: 28px;
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+    opacity: .7;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+}
+
+.social-list__item {
+    margin: 0 .5em;
+}
+
+.social-list__link {
+    padding: .5em;
+}
+
+
+
